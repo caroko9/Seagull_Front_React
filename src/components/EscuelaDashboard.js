@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Escuela() {
+function EscuelaDashboard() {
     return (
       <div>
       <h3>ESCUELAS</h3>
@@ -9,4 +9,4 @@ function Escuela() {
     );
   }
 
-export default Escuela;
+export default EscuelaDashboard;
