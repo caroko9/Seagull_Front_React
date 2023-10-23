@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 function ProductoDashboard() {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true); // Estado para controlar la carga
 
   useEffect(() => {
     fetch('http://localhost:3002/productos')
       .then((response) => response.json())
       .then((data) => {
         setProductos(data.data);
+        setLoading(false); // Cambia el estado a false en caso de error
       })
      }, []);
 
@@ -15,8 +17,9 @@ function ProductoDashboard() {
     <div>
       <h3>LISTADO DE PRODUCTOS</h3>
       <br/>
-      <p>Cargando...</p>
-      <br/>
+      {loading ? ( // Si loading es true, muestra un mensaje de carga
+        <p>Cargando...</p>
+      ) : (
       <div>
         {productos.map((producto) => (
           <div key={producto.id}>
@@ -31,6 +34,7 @@ function ProductoDashboard() {
           </div>
         ))}
       </div>
+      )}
     </div>
   );
 }

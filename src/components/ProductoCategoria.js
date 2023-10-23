@@ -29,7 +29,8 @@ function ProductoCategoria() {
   };
 
   return (
-    <div className='categorias'>
+    <div className="categorias">
+ 
         <div>
           <h3>TOTAL DE PRODUCTOS POR CATEGORÍA:</h3>
           <ul>

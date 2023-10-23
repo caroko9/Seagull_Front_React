@@ -4,25 +4,28 @@ import { useState, useEffect} from 'react';
 
 function EscuelaDashboard(props) {
   const [escuelas, setEscuelas] = useState([]);
+  const [loading, setLoading] = useState(true);
   
   useEffect (() => {
   
     fetch("https://seagull-surfing.onrender.com/escuelas")
      .then(response => {return response.json()})
     .then(data => {
-      console.log(data); 
-      setEscuelas(data.data)
+      const primeras10Escuelas = data.data.slice(0, 10); //Filtro para que muestre solo las primeras 10 Escuelas
+      setEscuelas(primeras10Escuelas);
+      setLoading(false);
     })
   }, [])
  
 
   return (
     <div>
-      <h3>ESCUELAS DE SURF</h3>
+      <h3>TOP 10 DE NUESTRAS ESCUELAS DE SURF</h3>
       <br/>
-      <p>Cargando...</p>
-      <br />
-      <div>
+      {loading ? ( // Si loading es true, muestra un mensaje de carga
+        <p>Cargando...</p>
+      ) : (
+        <div>
         {escuelas.map((escuela) => (
           <div key={escuela.id}>
             <h4>{escuela.nombre}</h4>
@@ -39,9 +42,9 @@ function EscuelaDashboard(props) {
           </div>
         ))}
       </div>
+           )}
     </div>
- 
-  );
+   );
 }
 
 export default EscuelaDashboard;

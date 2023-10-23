@@ -8,9 +8,9 @@ const Sidebar = () => {
                 <br/>
                 <li><NavLink to="/escuelas" >Total Escuelas</NavLink></li> 
                 <br/>
-                <li><NavLink to="/escuelaDetalle" >Escuela Detalle</NavLink></li>
+                <li><NavLink to="/escuelaDetalle" >Escuelas - TOP 10</NavLink></li>
                 <br/>
-                <li><NavLink to="/productos" >Total Productos Productos</NavLink></li>
+                <li><NavLink to="/productos" >Total Productos</NavLink></li>
                 <br/>
                 <li><NavLink to="/productoDetalle" >Producto Detalle</NavLink></li>
                 <br/>
