@@ -11,8 +11,8 @@ function EscuelaDashboard(props) {
     fetch("https://seagull-surfing.onrender.com/escuelas")
      .then(response => {return response.json()})
     .then(data => {
-      console.log(data); 
-      setEscuelas(data.data)
+      const primeras10Escuelas = data.data.slice(0, 10); //Filtro para que muestre solo las primeras 10 Escuelas
+      setEscuelas(primeras10Escuelas);
       setLoading(false);
     })
   }, [])
@@ -20,7 +20,7 @@ function EscuelaDashboard(props) {
 
   return (
     <div>
-      <h3>ESCUELAS DE SURF</h3>
+      <h3>TOP 10 DE NUESTRAS ESCUELAS DE SURF</h3>
       <br/>
       {loading ? ( // Si loading es true, muestra un mensaje de carga
         <p>Cargando...</p>
