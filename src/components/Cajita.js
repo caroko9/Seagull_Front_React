@@ -22,7 +22,7 @@ useEffect (() => {
     <div className='tiulocajita'> 
     <h2> Total Registros de {props.titulo}</h2>
     <br/>
-    <h3>Total: { valorestado}</h3>
+    <h3>Total: { valorestado }</h3>
     <br/>
     </div>
     

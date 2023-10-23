@@ -45,3 +45,8 @@ text-align: left;
   }
 }
   
+.categorias {
+ul { 
+  list-style: none;
+}
+}

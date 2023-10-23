@@ -4,6 +4,7 @@ import { useState, useEffect} from 'react';
 
 function EscuelaDashboard(props) {
   const [escuelas, setEscuelas] = useState([]);
+  const [loading, setLoading] = useState(true);
   
   useEffect (() => {
   
@@ -12,6 +13,7 @@ function EscuelaDashboard(props) {
     .then(data => {
       console.log(data); 
       setEscuelas(data.data)
+      setLoading(false);
     })
   }, [])
  
@@ -20,9 +22,10 @@ function EscuelaDashboard(props) {
     <div>
       <h3>ESCUELAS DE SURF</h3>
       <br/>
-      <p>Cargando...</p>
-      <br />
-      <div>
+      {loading ? ( // Si loading es true, muestra un mensaje de carga
+        <p>Cargando...</p>
+      ) : (
+        <div>
         {escuelas.map((escuela) => (
           <div key={escuela.id}>
             <h4>{escuela.nombre}</h4>
@@ -37,9 +40,9 @@ function EscuelaDashboard(props) {
           </div>
         ))}
       </div>
+           )}
     </div>
- 
-  );
+   );
 }
 
 export default EscuelaDashboard;
