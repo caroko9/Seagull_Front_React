@@ -1,13 +1,16 @@
 import React from "react";
 import { useState, useEffect} from 'react';
 
-function Cajita() {
+function Cajita(props) {
 let estado = useState("");
 let setestado = estado[1];
 let valorestado = estado[0];
 
 useEffect (() => {
-  fetch('http://localhost:3002/escuelas/') 
+
+  const apiUrl = `http://localhost:3002/${encodeURIComponent(props.parametro)}`;
+  fetch(apiUrl)
+  // fetch('http://localhost:3002/escuelas/') 
   .then(response => {return response.json()})
   .then(data => {
     console.log(data); 
@@ -16,11 +19,16 @@ useEffect (() => {
 }, [])
 
   return (
-    <div className='tiulocajita'>
-    <h4>DETALLE</h4>
-    <h5>{ valorestado}</h5>
+    <div className='tiulocajita'> 
+    <h2> Total Registros de {props.titulo}</h2>
+    <h3>Total: { valorestado}</h3>
+    <br/>
+
+    <h2>Último Registro</h2>
+    <h5>SARAsA</h5>
     </div>
-  );
+    
+    );
 }
 
 

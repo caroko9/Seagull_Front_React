@@ -9,7 +9,8 @@
 
 body {
   font-family: 'Blinker', sans-serif;
-  background-color: #f1e3dd
+  background-color: #E0FFFF;
+  text-align: center;
 }
 
 .flex {
@@ -17,15 +18,16 @@ body {
 }
 
 .navbar {
-background-color:#8d9db6;
+background-color: #AFEEEE;
 padding: 1rem 2rem;
 border-bottom: 1px solid grey;
+text-align: left;
 } 
 
 
 .sidebar {
-  background-color:#667292;
-  width: 14rem;
+  background-color:#AFEEEE;
+  width: 30rem;
   height: calc(100vh - 52px);
   border-right: 1px solid grey;
   ul {
