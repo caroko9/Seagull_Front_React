@@ -3,6 +3,7 @@ import React from 'react';
 import Cajita from '../src/components/Cajita';
 import EscuelaDashboard from '../src/components/EscuelaDashboard';
 import ProductoDashboard from '../src/components/ProductoDashboard';
+import ProductoCategoria from '../src/components/ProductoCategoria';
 import Navbar from '../src/components/Navbar';
 import Sidebar from '../src/components/Sidebar';
 import './App.css';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/productos" element={<Cajita titulo="PRODUCTOS" parametro="productos" />} />
           <Route path="/escuelaDetalle" element={<EscuelaDashboard/>} />
           <Route path="/productoDetalle" element={<ProductoDashboard />} />
+          <Route path="/productoCategoria" element={<ProductoCategoria />} />
 
         </Routes>
       </div>

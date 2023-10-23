@@ -21,11 +21,9 @@ useEffect (() => {
   return (
     <div className='tiulocajita'> 
     <h2> Total Registros de {props.titulo}</h2>
+    <br/>
     <h3>Total: { valorestado}</h3>
     <br/>
-
-    <h2>Último Registro</h2>
-    <h5>SARAsA</h5>
     </div>
     
     );

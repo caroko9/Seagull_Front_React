@@ -27,7 +27,7 @@ text-align: left;
 
 .sidebar {
   background-color:#AFEEEE;
-  width: 30rem;
+  width: 20rem;
   height: calc(100vh - 52px);
   border-right: 1px solid grey;
   ul {
