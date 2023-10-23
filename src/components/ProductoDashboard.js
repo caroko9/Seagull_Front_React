@@ -22,10 +22,11 @@ function ProductoDashboard() {
           <div key={producto.id}>
             <h4>{producto.nombre}</h4>
             <p>{producto.descripcion}</p>
-            <img src={producto.imagen} alt={producto.nombre} width={200} height={200} />
-            <p>Precio: {producto.precio}</p>
-            <p>Categoría: {producto.categoria}</p>
-            <p>Fecha de Creación: {producto.fecha_creacion}</p>
+            <img src={producto.imagen} alt={producto.nombre} width={209.17} height={300} />
+            <p className='info'>Precio:</p> <p> $ {producto.precio}</p>
+            <p className='info'>Categoría: </p> <p>{producto.categoria}</p>
+            <p className='info'>Fecha de Creación:</p> <p> {producto.fecha_creacion}</p>
+           
             <br/>
           </div>
         ))}

@@ -30,12 +30,11 @@ function ProductoCategoria() {
 
   return (
     <div className='categorias'>
- 
         <div>
           <h3>TOTAL DE PRODUCTOS POR CATEGORÍA:</h3>
           <ul>
             {Object.entries(categorias).map(([categoria, cantidad]) => (
-              <li key={categoria}>
+              <li className='categoria' key={categoria}>
                 {categoria}: {cantidad}
               </li>
             ))}

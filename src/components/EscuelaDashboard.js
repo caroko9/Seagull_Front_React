@@ -27,12 +27,14 @@ function EscuelaDashboard(props) {
           <div key={escuela.id}>
             <h4>{escuela.nombre}</h4>
             <p>{escuela.descripcion}</p>
-            <p>Email: {escuela.email}</p>
-            <p>Página web: {escuela.pagina_web}</p>
-            <p>Teléfono: {escuela.telefono}</p>
-            <p>Ubicación: {escuela.ubicacion}</p>
-            <p>Estado: {escuela.estado}</p>
-            <img src={escuela.imagen} alt={escuela.nombre} width={300} height={200} />
+            <img src={escuela.imagen} alt={escuela.nombre} height={200} />
+
+            <p className='info'>Email:</p> <p> {escuela.email}</p>
+            <p className='info'>Página web:</p> <p>{escuela.pagina_web}</p>
+            <p className='info'>Teléfono:</p> <p> {escuela.telefono}</p>
+            <p className='info'>Ubicación:</p> <p>{escuela.ubicacion}</p>
+            <p className='info'>Estado: </p> <p>{escuela.estado}</p>
+            
             <br/>
           </div>
         ))}

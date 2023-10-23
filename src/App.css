@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&family=Roboto+Mono&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +8,7 @@
 
 
 body {
-  font-family: 'Blinker', sans-serif;
-  background-color: #E0FFFF;
+  background-color: #e0ffff50;
   text-align: center;
 }
 
@@ -18,30 +17,85 @@ body {
 }
 
 .navbar {
-background-color: #AFEEEE;
+background-color: rgba(27, 85, 110, 0.342);
 padding: 1rem 2rem;
-border-bottom: 1px solid grey;
+border-bottom: 1px solid rgba(20, 102, 138, 0.116);
 text-align: left;
+font-family: 'Chelsea Market';
+color: #165A7A;
 } 
 
 
+
 .sidebar {
-  background-color:#AFEEEE;
-  width: 20rem;
-  height: calc(100vh - 52px);
-  border-right: 1px solid grey;
-  ul {
+  background-color:rgba(42, 106, 134, 0.295);
+  width: 25rem;
+  font-family: 'Chelsea Market';
+  text-transform: uppercase;
+  border-right: 1px solid rgba(20, 102, 138, 0.116);
+}
+
+ .slidebar ul {
     list-style: none;
     padding: 1rem 2rem;
-    li {
-      margin-bottom: 1rem;
-      a {
-        text-decoration: none;
-        &.active {
-          background-color: #e7e9eb;
-        }
-      }
     }
-  }
+
+
+.slidebar li{
+  margin-bottom: 1rem;
 }
-  
+.sidebar a{
+  color: #4a7183; 
+  text-decoration: none;
+ 
+}
+
+
+/* RESTO DE ESTILOS */
+
+h2{
+  font-family: 'Chelsea Market';
+  color:rgb(55, 120, 148);
+  text-transform: uppercase;
+}
+
+h3{
+  font-family: 'Chelsea Market';
+  color:rgb(47, 119, 150);
+  text-align: center;
+}
+
+h4{
+  font-family: 'Chelsea Market';
+  color:rgb(104, 169, 197);
+}
+
+p{
+ font-family: 'Klee One';
+ font-weight: bold;
+ align-items: center;
+}
+
+.datos{
+  display: flex; 
+  align-items: center; 
+}
+.info {
+font-family: 'Klee One';
+font-size: 16px;
+text-decoration: underline;
+color: #6395ac;
+text-transform: uppercase;
+margin-right: 10px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li.categoria{
+  font-family: 'Klee One';
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
