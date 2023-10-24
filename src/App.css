@@ -30,6 +30,7 @@ color: #165A7A;
 .sidebar {
   background-color:rgba(42, 106, 134, 0.295);
   width: 25rem;
+  height: calc(100vh - 52px);
   font-family: 'Chelsea Market';
   text-transform: uppercase;
   border-right: 1px solid rgba(20, 102, 138, 0.116);
